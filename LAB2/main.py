@@ -50,6 +50,7 @@ def main(argv=None):
         return 0
 
     # python .\LAB2\main.py solve -n 3 -A 3 2 -2 1 1 1 2 2 1 -b 3 3 5
+    # python .\LAB2\main.py solve -n 3 -A 3 2 -2 3 2 -2 2 2 1 -b 3 3 5
     if args.cmd == "solve":
         A = tf.constant(np.array(args.A, dtype=np.float32).reshape(args.n, args.n))
         b = tf.constant(np.array(args.b, dtype=np.float32).reshape(args.n, 1))
