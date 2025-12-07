@@ -31,7 +31,7 @@ Do normalizacji użyto warstwy `Normalization()` dopasowanej tylko na zbiorze tr
 **Parametry treningu:**
 
 * optymalizator: Adam(lr=0.001)
-* epoki: 40
+* epoki: 5
 
 **Wynik:**
 
