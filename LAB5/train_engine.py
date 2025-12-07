@@ -12,9 +12,11 @@ from models import build_model
 def load_fashion_mnist():
     (x_train_full, y_train_full), (x_test, y_test) = tf.keras.datasets.fashion_mnist.load_data()
 
+    # Normalizacja wartości pikseli 0–255 → 0–1
     x_train_full = x_train_full.astype("float32") / 255.0
     x_test = x_test.astype("float32") / 255.0
 
+    # Dodanie wymiaru kanału (TensorFlow oczekuje kształtu 28×28×1)
     x_train_full = np.expand_dims(x_train_full, -1)
     x_test = np.expand_dims(x_test, -1)
 
